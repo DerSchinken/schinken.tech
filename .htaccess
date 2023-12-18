@@ -1,9 +1,3 @@
-# Deny access to hidden files - files that start with a dot (.)
-<FilesMatch "^\.">
-Order allow,deny
-Deny from all
-</FilesMatch>
-
 <FilesMatch ".py$">
 Order allow,deny
 Deny from all
@@ -22,3 +16,6 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
+# Deny access to hidden files - files that start with a dot (.)
+RewriteEngine on
+RewriteRule (^\.|/\.) – [F]
