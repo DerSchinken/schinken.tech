@@ -1,0 +1,126 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* custom selection  color + removing all effects from text */
+::-moz-selection { background: rgba(128, 0, 128, 0.7); text-decoration: none; text-shadow: none; }
+::selection { background: rgba(128, 0, 128, 0.7); text-decoration: none; text-shadow: none; }
+
+/* Custom scroll bar doesnt work for firefox */
+body::-webkit-scrollbar { background: #1e1e24; }
+body::-webkit-scrollbar-thumb { background: #6649b8; }
+
+body {
+	background:
+		/* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        /* bottom, image */
+        url("../img/background.png");
+
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+
+	color: white;
+	font-family: "Arial";
+}
+
+#about-me {
+	margin-left: 40px;
+	font-size: 25px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#projects {
+	font-size: 25px;
+}
+
+footer {
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+}
+
+nav {
+	padding-right: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: 0.5s;
+}
+
+nav button {
+	/* set background and text color */
+	background-color: rgba(0, 0, 0, 0);
+	color: lightgray;
+
+	/* delete border and set transition time to 0.5s */
+	border:	0;
+	transition: 0.5s;
+	margin-left: 26px;
+
+	/* set everything to the right */
+	float: right;
+}
+
+nav button:hover {
+	color: lightgreen;
+}
+
+#home-button {
+	align-self: stretch;
+	float: left;
+	transition: 0.2s;
+}
+
+#home-button button {
+	/* set background and text color */
+	background-color: rgba(0, 0, 0, 0);
+	color: #56c4e8;
+	font-size: 30px;
+
+	/* delete border and set transition time to 0.5s */
+	border:	0;
+	transition: 0.2s;
+}
+
+#home-button button:hover {
+	color: lightseagreen;
+}
+
+#projects {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 390px);
+	width: 390px;
+}
+
+#projects a {
+	text-decoration: none;
+	color: white;
+}
+
+/* 
+for projects
+totally not copied from w3school
+ */
+.card {
+	margin-left: 10px;
+	padding: 2.6px 20.8px;
+	background-color: #181818;
+	border: 6.5px solid #282828;
+	border-radius: 10px;
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 5.2px 20.4px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
