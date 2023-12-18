@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8008:80"
+      - "4430:443"
