@@ -1,0 +1,24 @@
+# Deny access to hidden files - files that start with a dot (.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+<FilesMatch ".py$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch ".pyw$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch ".pyc$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^__">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
