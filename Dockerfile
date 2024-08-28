@@ -8,3 +8,4 @@ RUN apt install -y apache2 certbot python3-certbot-apache
 RUN certbot --apache --non-interactive --agree-tos -m der@schinken.tech --domain schinken.tech
 EXPOSE 80
 EXPOSE 443
+CMD ["apache2ctl", "-D", "FOREGROUND"]
