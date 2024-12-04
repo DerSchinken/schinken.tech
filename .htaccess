@@ -1,21 +1,5 @@
-<FilesMatch ".py$">
-Order allow,deny
-Deny from all
-</FilesMatch>
-<FilesMatch ".pyw$">
-Order allow,deny
-Deny from all
-</FilesMatch>
-<FilesMatch ".pyc$">
-Order allow,deny
-Deny from all
-</FilesMatch>
+RewriteEngine On
+RewriteBase /
 
-<FilesMatch "^__">
-Order allow,deny
-Deny from all
-</FilesMatch>
-
-# Deny access to hidden files - files that start with a dot (.)
-RewriteEngine on
-RewriteRule (^\.|/\.) – [F]
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^(.*)$ - [F]
