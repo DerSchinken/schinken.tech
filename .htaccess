@@ -2,4 +2,8 @@ RewriteEngine On
 RewriteBase /
 
 RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteCond %{REQUEST_URI} !/assets/.*\.js$
+RewriteCond %{REQUEST_URI} !/assets/.*\.css$
+RewriteCond %{REQUEST_URI} !/assets/.*\.png$
+RewriteCond %{REQUEST_URI} !^/$
 RewriteRule ^(.*)$ - [F]
